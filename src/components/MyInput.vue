@@ -2,8 +2,8 @@
 .wrap
 	.label
 		label(:for="name") {{name}}
-		.error this. is err
-	input(type="text" :id="name" :name="name")
+		.error {{ error }}
+	input(type="text" @input="input" :value="value" :id="name" :name="name")
 </template>
 
 <script>
@@ -16,9 +16,30 @@ export default {
 		rules: {
 			type: Object,
 		},
+		value: {
+			type: String,
+		},
 	},
-	data() {
-		return {}
+	methods: {
+		validate(value) {
+			if (this.rules.required && !value) {
+				return 'Required'
+			} else if (this.rules.min && value.length < this.rules.min) {
+				return `Min value need to be ${this.rules.min}`
+			} else return ''
+		},
+		input(e) {
+			this.$emit('update', {
+				name: this.name,
+				value: e.target.value,
+				valid: this.validate(e.target.value) ? false : true,
+			})
+		},
+	},
+	computed: {
+		error() {
+			return this.validate(this.value)
+		},
 	},
 }
 </script>

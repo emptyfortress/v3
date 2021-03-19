@@ -1,10 +1,15 @@
 <template lang="pug">
-MyInput(name="User" :rules="{required: true, min: 5}")
-MyButton(
-	background="darkslateblue" 
-	color="white"
-	:disabled="!valid"
-	)
+MyInput(name="User" 
+	:value="user.value" 
+	:rules="{required: true, min: 5}" 
+	@update="update")
+p {{ user }}
+MyInput(name="Password" 
+	:value="password.value" 
+	:rules="{required: true, min: 10}" 
+	@update="update")
+p {{ password }}
+MyButton(background="darkslateblue" color="white" :disabled="!valid")
 </template>
 
 <script>
@@ -12,13 +17,33 @@ import MyButton from '@/components/MyButton.vue'
 import MyInput from '@/components/MyInput.vue'
 
 export default {
+	components: { MyButton, MyInput },
 	data() {
 		return {
 			valid: true,
+			user: {
+				value: '',
+				valid: false,
+			},
+			password: {
+				value: '',
+				valid: false,
+			},
 		}
 	},
-	components: { MyButton, MyInput },
-	methods: {},
+	computed: {
+		valid() {
+			return this.user.valid && this.password.valid
+		},
+	},
+	methods: {
+		update(e) {
+			this[e.name.toLowerCase()] = {
+				value: e.value,
+				valid: e.valid,
+			}
+		},
+	},
 }
 </script>
 
