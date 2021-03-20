@@ -1,69 +1,46 @@
 <template lang="pug">
-form(@submit.prevent="submit")
-	MyInput(name="User" 
-		:value="user.value" 
-		:rules="{required: true, min: 5}" 
-		type="text"
-		@update="update")
-	p {{ user }}
-	MyInput(name="Password" 
-		:value="password.value" 
-		:rules="{required: true, min: 10}" 
-		type="password"
-		@update="update")
-	p {{ password }}
-	MyButton(type="submit" background="darkslateblue" color="white" :disabled="!valid")
+.card
+	.title
+	.content
+	.description
 </template>
 
 <script>
-import MyButton from '@/components/MyButton.vue'
-import MyInput from '@/components/MyInput.vue'
-
 export default {
-	components: { MyButton, MyInput },
+	components: {},
 	data() {
-		return {
-			user: {
-				value: '',
-				valid: false,
-			},
-			password: {
-				value: '',
-				valid: false,
-			},
-		}
+		return {}
 	},
-	computed: {
-		valid() {
-			return this.user.valid && this.password.valid
-		},
-	},
-	methods: {
-		submit() {
-			console.log('submit')
-		},
-		update(e) {
-			this[e.name.toLowerCase()] = {
-				value: e.value,
-				valid: e.valid,
-			}
-		},
-	},
+	computed: {},
+	methods: {},
 }
 </script>
 
-<style lang="scss">
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	/* text-align: center; */
-	color: #2c3e50;
-	margin-top: 60px;
-	font-size: 1.3rem;
-	padding: 3rem;
+<style scoped lang="scss">
+.card {
+	border: 1px solid silver;
+	border-radius: 8px;
+	max-width: 200px;
+	margin: 0 5px;
+	cursor: pointer;
+	box-shadow: 0 1px 3px darkgrey;
+	transition: 0.2s;
+	&:hover {
+		box-shadow: 0 1px 9px darkgrey;
+	}
 }
-form {
-	max-width: 600px;
+.title,
+.content,
+.description {
+	padding: 1rem;
+	text-transform: capitalize;
+	text-align: center;
+}
+.title,
+.content {
+	border-bottom: 1px solid silver;
+}
+.title {
+	font-size: 1.2rem;
 }
 </style>
