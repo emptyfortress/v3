@@ -3,7 +3,7 @@
 	.label
 		label(:for="name") {{name}}
 		.error {{ error }}
-	input(type="text" @input="input" :value="value" :id="name" :name="name")
+	input(:type="type" @input="input" :value="value" :id="name" :name="name")
 </template>
 
 <script>
@@ -17,6 +17,9 @@ export default {
 			type: Object,
 		},
 		value: {
+			type: String,
+		},
+		type: {
 			type: String,
 		},
 	},

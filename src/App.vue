@@ -1,15 +1,18 @@
 <template lang="pug">
-MyInput(name="User" 
-	:value="user.value" 
-	:rules="{required: true, min: 5}" 
-	@update="update")
-p {{ user }}
-MyInput(name="Password" 
-	:value="password.value" 
-	:rules="{required: true, min: 10}" 
-	@update="update")
-p {{ password }}
-MyButton(background="darkslateblue" color="white" :disabled="!valid")
+form(@submit.prevent="submit")
+	MyInput(name="User" 
+		:value="user.value" 
+		:rules="{required: true, min: 5}" 
+		type="text"
+		@update="update")
+	p {{ user }}
+	MyInput(name="Password" 
+		:value="password.value" 
+		:rules="{required: true, min: 10}" 
+		type="password"
+		@update="update")
+	p {{ password }}
+	MyButton(type="submit" background="darkslateblue" color="white" :disabled="!valid")
 </template>
 
 <script>
@@ -20,7 +23,6 @@ export default {
 	components: { MyButton, MyInput },
 	data() {
 		return {
-			valid: true,
 			user: {
 				value: '',
 				valid: false,
@@ -37,6 +39,9 @@ export default {
 		},
 	},
 	methods: {
+		submit() {
+			console.log('submit')
+		},
 		update(e) {
 			this[e.name.toLowerCase()] = {
 				value: e.value,
@@ -57,5 +62,8 @@ export default {
 	margin-top: 60px;
 	font-size: 1.3rem;
 	padding: 3rem;
+}
+form {
+	max-width: 600px;
 }
 </style>
