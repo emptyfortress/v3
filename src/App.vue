@@ -1,9 +1,10 @@
 <template lang="pug">
-PokemonCards(:pokemons="starters" 
+PokemonCards(:pokemons="starters"
 	:selectedId="selectedId"
 	@clickedPokemon="fetchEvolution")
 
 PokemonCards(:pokemons="evolution")
+	span test  
 
 </template>
 
@@ -48,4 +49,11 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+.test {
+	background: black;
+	background: #000000;
+}
+
+</style>
