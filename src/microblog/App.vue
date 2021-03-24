@@ -1,4 +1,5 @@
 <template lang="pug">
+input(type="text" :value="curTag" @input="setHashtag")
 .cards
 	Card(v-for="post in filteredPosts" )
 		template(v-slot:title) {{post.title}}
@@ -23,11 +24,22 @@ export default {
 			if (!store.state.currentTag) {
 				return store.state.posts
 			}
+
 			return store.state.posts.filter(post => post.hashtags.includes(store.state.currentTag)) 
 		})
 
+		const curTag = computed(() => {
+			return store.state.currentTag
+		})
+		const setHashtag = (e) => {
+			store.setHashtag(e.target.value)
+		}
+
 		return {
 			filteredPosts,
+			curTag,
+			setHashtag
+
 		}
 	}
 }

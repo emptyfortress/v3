@@ -1,11 +1,12 @@
 <template lang="pug">
 div
-	button.like {{ post.likes }}
+	button(@click="like").like {{ post.likes }}
 	Hashtag(:hash="tag" v-for="tag in post.hashtags")
 </template>
 
 <script>
 import Hashtag from './Hashtag.vue'
+import { store } from './store.js'
 
 export default {
 	components: { Hashtag },
@@ -14,6 +15,13 @@ export default {
 			type: Object
 		}
 	},
+	setup(props) {
+		const like = () => store.incrementLike(props.post)
+
+		return {
+			like
+		}
+	}
 }
 </script>
 
