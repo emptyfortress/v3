@@ -1,14 +1,17 @@
 <template lang="pug">
-div(v-for="hash in hashtags").hash ~{{ hash }}
+div(@click="setHashtag").hash ~{{ hash }}
 </template>
 
 <script>
 
 export default {
-	props: ['hashtags'],
-	setup() {
+	props: ['hash'],
+	setup(props, ctx) {
+		const setHashtag = () => { 
+			ctx.emit('setHashtag', props.hash) 
+		}
 		return {
-
+			setHashtag,
 		}
 	}
 }
