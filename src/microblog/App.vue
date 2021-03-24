@@ -4,11 +4,11 @@
 		template(v-slot:title) {{post.title}}
 		template(v-slot:content) {{ post.content }}
 		template(v-slot:description)
-			Controls(:post="post" @setHashtag="setHashtag")
+			Controls(:post="post")
 </template>
 
 <script>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { store } from './store'
 import Card from '../components/Card.vue'
 import Controls from './Controls.vue'
@@ -19,22 +19,15 @@ export default {
 		Controls,
 	},
 	setup() {
-		const currentTag = ref()
-
 		const filteredPosts = computed(() => {
-			if (!currentTag.value) {
+			if (!store.state.currentTag) {
 				return store.state.posts
 			}
-			return store.state.posts.filter(post => post.hashtags.includes(currentTag.value)) 
+			return store.state.posts.filter(post => post.hashtags.includes(store.state.currentTag)) 
 		})
 
-		const setHashtag = (tag) => {
-			currentTag.value = tag
-		}
 		return {
 			filteredPosts,
-			setHashtag,
-			currentTag,
 		}
 	}
 }

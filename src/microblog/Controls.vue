@@ -1,7 +1,7 @@
 <template lang="pug">
 div
 	button.like {{ post.likes }}
-	Hashtag(:hash="tag" v-for="tag in post.hashtags" @setHashtag="setHashtag")
+	Hashtag(:hash="tag" v-for="tag in post.hashtags")
 </template>
 
 <script>
@@ -14,14 +14,6 @@ export default {
 			type: Object
 		}
 	},
-	setup(props, ctx) {
-		const setHashtag = (tag) => {
-			ctx.emit('setHashtag', tag)
-		}
-		return {
-			setHashtag
-		}
-	}
 }
 </script>
 

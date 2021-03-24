@@ -3,12 +3,12 @@ div(@click="setHashtag").hash ~{{ hash }}
 </template>
 
 <script>
-
+import {store} from './store.js'
 export default {
 	props: ['hash'],
-	setup(props, ctx) {
+	setup(props) {
 		const setHashtag = () => { 
-			ctx.emit('setHashtag', props.hash) 
+			store.setHashtag(props.hash)
 		}
 		return {
 			setHashtag,
