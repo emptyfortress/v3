@@ -6,31 +6,16 @@ p {{all}}
 </template>
 
 <script>
-import { ref, reactive, computed, watch, watchEffect } from 'vue'
-
+import {useNumbers} from './number'
 export default {
 	setup() {
-		const count = ref(0)
-		const increment = () => (count.value += 1)
-		const increase = (num) => {
-			numbers[num] += 1
-		}
-
-		const all = computed(() => count.value + numbers.a + numbers.b)
-		const numbers = reactive({
-			a: 0,
-			b: 0,
-		})
-
-		// watch(
-		// 	numbers,
-		// 	(newVal) => {
-		// 		console.log(newVal.a, newVal.b)
-		// 	}, { immediate: true, })
-		watchEffect(() => {
-			console.log(numbers.a)
-		})
-
+		const {
+			count,
+			increment,
+			numbers,
+			increase,
+			all,
+		} = useNumbers()
 		return {
 			count,
 			increment,
@@ -46,4 +31,6 @@ export default {
 h2 {
 	text-align: center;
 }
+
 </style>
+
