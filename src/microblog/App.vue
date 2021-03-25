@@ -20,13 +20,6 @@ export default {
 		Controls,
 	},
 	setup() {
-		const filteredPosts = computed(() => {
-			if (!store.state.currentTag) {
-				return store.state.posts
-			}
-
-			return store.state.posts.filter(post => post.hashtags.includes(store.state.currentTag)) 
-		})
 
 		const curTag = computed(() => {
 			return store.state.currentTag
@@ -36,7 +29,7 @@ export default {
 		}
 
 		return {
-			filteredPosts,
+			filteredPosts: store.filteredPosts,
 			curTag,
 			setHashtag
 
