@@ -4,18 +4,24 @@ p {{ post.content }}
 </template>
 
 <script>
-import { useRoute, } from 'vue-router'
-import { computed } from 'vue'
+// import { useRoute, } from 'vue-router'
+// import { computed } from 'vue'
 import {testPosts} from '../microblog/posts.js'
 
 export default {
-	setup() {
-		const route = useRoute()
-		const post = computed(() =>testPosts.find((x) => x.id === parseInt(route.params.id)))
-		return {
-			post
+	computed: {
+		post() {
+			return testPosts.find((x) => x.id === parseInt(this.$route.params.id ))
 		}
+
 	}
+	// setup() {
+	// 	const route = useRoute()
+	// 	const post = computed(() =>testPosts.find((x) => x.id === parseInt(route.params.id)))
+	// 	return {
+	// 		post
+	// 	}
+	// }
 }
 </script>
 
