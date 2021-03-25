@@ -9,6 +9,9 @@ p {{ post.content }}
 import {testPosts} from '../microblog/posts.js'
 
 export default {
+	beforeRouteEnter(to, from, next) {
+		next('/posts')
+	},
 	computed: {
 		post() {
 			return testPosts.find((x) => x.id === parseInt(this.$route.params.id ))

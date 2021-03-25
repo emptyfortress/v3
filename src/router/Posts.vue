@@ -6,10 +6,17 @@ routerView
 </template>
 
 <script>
+// import { watchEffect } from 'vue'
+// import { useRoute } from 'vue-router'
 import {testPosts} from '../microblog/posts.js'
 
 export default {
 	setup() {
+		// const route = useRoute()
+		// watchEffect(() => {
+		// 	console.log(route.params)
+		// })
+
 		return {
 			testPosts
 		}
