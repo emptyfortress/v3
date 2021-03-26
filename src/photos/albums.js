@@ -10,7 +10,7 @@ export const albums = {
 	mutations: {
 		setAlbums(state, payload) {
 			state.all = payload
-		}
+		},
 	},
 
 	actions: {

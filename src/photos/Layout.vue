@@ -33,7 +33,9 @@ export default {
 	border-top: 2px solid silver;
 }
 .sidebar {
-	width: 300px;
+	flex-basis: 300px;
+	flex-shrink: 0;
+	flex-grow: 0;
 	border-right: 2px solid silver;
 	padding: 1rem;
 }

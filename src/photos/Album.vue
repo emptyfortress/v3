@@ -1,18 +1,23 @@
 <template lang="pug">
-button {{ album.title }}
+button(@click="click") {{ album.title }}
 </template>
 
 <script>
+import { useStore } from 'vuex'
 
 export default {
 	props: {
 		album: Object
 	},
-	// setup() {
-	// 	return {
-	//
-	// 	}
-	// }
+	setup(props) {
+		const store = useStore()
+		const click = () => {
+			store.dispatch('photos/fetchPhotosFromAlbum', props.album)
+		}
+		return {
+			click
+		}
+	}
 }
 </script>
 
