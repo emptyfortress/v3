@@ -2,7 +2,6 @@
 .ap
 	h2 Таблица исполнения
 	Butt
-	<!-- User(color="grey") -->
 	List
 </template>
 
@@ -29,5 +28,19 @@ h2 {
 	font-size: 1.5rem;
 	font-weight: normal;
 	text-align: center;
+}
+.plus {
+	width: 9px;
+	height: 9px;
+	line-height: 0;
+	background: #fff;
+	border: 1px solid #aaa;
+	cursor: pointer;
+	display: inline-block;
+	img {
+		display: block;
+		margin: 1px;
+		opacity: .6;
+	}
 }
 </style>

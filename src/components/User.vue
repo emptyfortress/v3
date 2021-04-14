@@ -1,6 +1,12 @@
 <template lang="pug">
 .icon(:class="color")
 	img(src="@/assets/user1.svg")
+	.otvet O
+	.contr K
+	.done
+		img(src="@/assets/check.svg")
+	.time
+		img(src="@/assets/time.svg")
 </template>
 
 <script>
@@ -28,6 +34,57 @@ export default {
 	img {
 		width: 15px;
 		margin-top: 4px;
+	}
+}
+.otvet {
+	font-size: 10px;
+	color: #fff;
+	width: 11px;
+	height: 11px;
+	background: #C633E3;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	position: absolute;
+	top: -4px;
+	left: -6px;
+}
+.contr {
+	font-size: 10px;
+	color: #fff;
+	width: 11px;
+	height: 11px;
+	background: orange;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	position: absolute;
+	top: -4px;
+	right: -6px;
+}
+.time {
+	width: 11px;
+	height: 11px;
+	background: red;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	position: absolute;
+	bottom: -4px;
+	left: -6px;
+	img {
+		transform: translateY(-3px);
+		width: 7px;
+	}
+}
+.done {
+	width: 11px;
+	height: 11px;
+	background: green;
+	border: 1px solid #fff;
+	position: absolute;
+	bottom: -4px;
+	right: -6px;
+	img {
+		transform: translateY(-4px);
+		width: 8px;
 	}
 }
 </style>

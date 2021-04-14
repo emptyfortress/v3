@@ -1,8 +1,8 @@
 <template lang="pug">
 tr
-	td.first
+	td.first.fifth
 		.flex
-			.plus(@click="expand = !expand")
+			.plus
 				img(src="@/assets/plus.svg" v-if="!expand")
 				img(src="@/assets/minus.svg" v-else)
 			User(color="grey")
@@ -14,19 +14,17 @@ tr
 	td Поликарпов С.М.
 	td Docsvision
 	td Суворов А.А.
-Row1(v-if="expand")
 </template>
 
 <script>
 import User from '@/components/User.vue'
-import Row1 from '@/components/Row1.vue'
 
 export default {
 	props: ['child'],
-	components: { User, Row1 },
+	components: { User  },
 	data() {
 		return {
-			expand: false,
+			expand: true,
 		}
 	},
 
@@ -36,8 +34,8 @@ export default {
 <style scoped lang="scss">
 td.first {
 	/* padding: .5rem 1rem; */
-	.second & {
-		padding-left: 37px;
+	&.fifth {
+		padding-left: 64px;
 	}
 }
 

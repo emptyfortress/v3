@@ -12,16 +12,6 @@ table.tab
 		th Ответственный исполнитель
 	tbody
 		Row
-		Row
-		Row
-		Row
-		Row
-		Row
-		Row
-		Row
-		Row
-		Row
-		Row
 
 </template>
 
@@ -29,7 +19,14 @@ table.tab
 import Row from '@/components/Row.vue'
 
 export default {
-	components: { Row }
+	components: { Row },
+	data() {
+		return {
+			rows: [
+				{  }
+			]
+		}
+	},
 }
 </script>
 

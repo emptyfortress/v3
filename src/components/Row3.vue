@@ -1,6 +1,6 @@
 <template lang="pug">
 tr
-	td.first
+	td.first.forth
 		.flex
 			.plus(@click="expand = !expand")
 				img(src="@/assets/plus.svg" v-if="!expand")
@@ -14,16 +14,16 @@ tr
 	td Поликарпов С.М.
 	td Docsvision
 	td Суворов А.А.
-Row1(v-if="expand")
+Row4(v-if="expand")
 </template>
 
 <script>
 import User from '@/components/User.vue'
-import Row1 from '@/components/Row1.vue'
+import Row4 from '@/components/Row4.vue'
 
 export default {
 	props: ['child'],
-	components: { User, Row1 },
+	components: { User, Row4  },
 	data() {
 		return {
 			expand: false,
@@ -36,8 +36,8 @@ export default {
 <style scoped lang="scss">
 td.first {
 	/* padding: .5rem 1rem; */
-	.second & {
-		padding-left: 37px;
+	&.forth {
+		padding-left: 48px;
 	}
 }
 
