@@ -16,6 +16,7 @@ h2 {
 	height: 9px;
 	line-height: 0;
 	border: 1px solid #dedede;
+	background: #fff;
 }
 .plus {
 	width: 9px;
@@ -47,15 +48,27 @@ td.first {
 	background-repeat: repeat-y;
 	background-position: top 0px left 6px;
 	&.second {
+		background-image: url('@/assets/dot1.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 24px;
 	}
 	&.third {
+		background-image: url('@/assets/dot2.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 48px;
 	}
 	&.forth {
+		background-image: url('@/assets/dot3.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 72px;
 	}
 	&.fifth {
+		background-image: url('@/assets/dot4.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 96px;
 	}
 }
