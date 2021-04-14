@@ -1,15 +1,15 @@
 <template lang="pug">
 .ap
 	h2 Таблица исполнения
-	Row
-	User
+	Butt
+	User(color="grey")
 </template>
 
 <script>
-import Row from '@/components/Row.vue'
+import Butt from '@/components/Butt.vue'
 import User from '@/components/User.vue'
 export default {
-	components: { Row, User },
+	components: { Butt, User },
 
 }
 </script>

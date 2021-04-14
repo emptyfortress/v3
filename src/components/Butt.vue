@@ -7,9 +7,9 @@
 	div
 		.bt.grey Показать все дерево
 	div
-		.bt.hollow Свернуть все
-		.bt.hollow Развернуть все
-		.bt.hollow Обновить
+		.bt.grey Свернуть все
+		.bt.grey Развернуть все
+		.bt.grey Обновить
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
 	align-items: center;
 }
 .bt {
-	font-size: .9rem;
+	font-size: .8rem;
 	display: inline-block;
 	margin-right: 4px;
 	padding: 7px 15px;
@@ -33,7 +33,7 @@ export default {
 		border: 1px solid #3677a0;
 	}
 	&.grey {
-		background: #ccc;
+		background: #dedede;
 	}
 }
 
