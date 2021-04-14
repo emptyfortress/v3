@@ -47,8 +47,4 @@ export default {
 
 <style scoped lang="scss">
 
-.link {
-	color: #267DFF;
-	cursor: pointer;
-}
 </style>

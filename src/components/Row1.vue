@@ -11,7 +11,6 @@ tr
 				:contr="contr"
 				:time="time"
 				:otvet="otvet"
-				:child="child"
 				)
 	td.link На исполнение
 	td Орлов П.К.
@@ -21,7 +20,14 @@ tr
 	td Поликарпов С.М.
 	td Docsvision
 	td Суворов А.А.
-Row2(v-if="expand")
+Row2(v-if="expand" v-for="item in child"
+	:color="item.color"
+	:done="item.done"
+	:contr="item.contr"
+	:time="item.time"
+	:otvet="item.otvet"
+	:child="item.child"
+	)
 </template>
 
 <script>

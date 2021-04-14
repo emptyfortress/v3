@@ -24,46 +24,13 @@ table.tab
 
 <script>
 import Row from '@/components/Row.vue'
+import { rows } from '@/table/rows.js'
 
 export default {
 	components: { Row },
 	data() {
 		return {
-			rows: [
-				{ color: 'blue', done: true, otvet: false, contr: false, time: true,
-					child: [
-						{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-						{ color: 'blue', done: false, otvet: true, contr: false, time: false,
-							child: [
-								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'green', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
-							]
-						},
-						{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-						{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
-						{ color: 'grey', done: false, otvet: true, contr: false, time: false,
-							child: [
-								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'green', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
-							]
-						},
-						{ color: 'blue', done: false, otvet: true, contr: false, time: false,
-							child: [
-								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
-								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
-							]
-						},
-					]
-				},
-				{ color: 'green', done: false, otvet: true, contr: false, time: false  },
-				{ color: 'grey', done: false, otvet: false, contr: true, time: true  },
-			]
+			rows
 		}
 	},
 }

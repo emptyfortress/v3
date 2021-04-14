@@ -2,10 +2,13 @@
 tr
 	td.first.fifth
 		.flex
-			.plus
-				img(src="@/assets/plus.svg" v-if="!expand")
-				img(src="@/assets/minus.svg" v-else)
-			User(color="grey")
+			.plus1
+			User(:color="color"
+				:done="done"
+				:contr="contr"
+				:time="time"
+				:otvet="otvet"
+				)
 	td.link На исполнение
 	td Орлов П.К.
 	td Завершено
@@ -20,7 +23,7 @@ tr
 import User from '@/components/User.vue'
 
 export default {
-	props: ['child'],
+	props: ['child', 'color', 'done', 'contr', 'otvet', 'time'],
 	components: { User  },
 	data() {
 		return {

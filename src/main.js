@@ -7,6 +7,7 @@ import { createApp } from 'vue'
 // import { store } from './photos/store'
 // import { router } from './photos/router'
 import App from './table/App.vue'
+import './table/main.scss'
 
 const app = createApp(App)
 app.mount('#app')
