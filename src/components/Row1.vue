@@ -12,7 +12,7 @@ tr
 				:time="time"
 				:otvet="otvet"
 				)
-	td.link На исполнение
+	td.link Подготовить ответ
 	td Орлов П.К.
 	td Завершено
 	td 31.07.2020
