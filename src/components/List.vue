@@ -37,25 +37,4 @@ export default {
 </script>
 
 <style lang="scss">
-.tab {
-	margin-top: 2rem;
-	width: 100%;
-	font-size: .9rem;
-	border-collapse: collapse;
-	th {
-		text-align: left;
-		border-bottom: 1px solid #ccc;
-		font-size: .85rem;
-		font-weight: 300;
-	}
-	tr {
-		&:hover {
-			background: #efefef;
-		}
-	}
-	td {
-		padding: 8px 0;
-		border-bottom: 1px solid #eee;
-	}
-}
 </style>

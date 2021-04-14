@@ -40,18 +40,42 @@ h2 {
 .link {
 	color: #267DFF;
 	cursor: pointer;
+	padding-right: 15px;
 }
 td.first {
 	&.second {
-		padding-left: 19px;
+		padding-left: 24px;
 	}
 	&.third {
-		padding-left: 38px;
+		padding-left: 48px;
 	}
 	&.forth {
-		padding-left: 57px;
+		padding-left: 72px;
 	}
 	&.fifth {
-		padding-left: 76px;
+		padding-left: 96px;
+	}
+}
+.tab {
+	margin-top: 2rem;
+	width: 100%;
+	font-size: .9rem;
+	border-collapse: collapse;
+	th {
+		text-align: left;
+		border-bottom: 1px solid #ccc;
+		font-size: .80rem;
+		font-weight: 400;
+		color: #888;
+		padding-bottom: 5px;
+	}
+	tr {
+		&:hover {
+			background: #efefef;
+		}
+	}
+	td {
+		padding: 8px 0;
+		border-bottom: 1px solid #eee;
 	}
 }
