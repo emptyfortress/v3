@@ -2,14 +2,16 @@
 .ap
 	h2 Таблица исполнения
 	Butt
-	User(color="grey")
+	<!-- User(color="grey") -->
+	List
 </template>
 
 <script>
 import Butt from '@/components/Butt.vue'
 import User from '@/components/User.vue'
+import List from '@/components/List.vue'
 export default {
-	components: { Butt, User },
+	components: { Butt, User, List },
 
 }
 </script>
