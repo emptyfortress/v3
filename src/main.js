@@ -5,7 +5,9 @@ import { createApp } from 'vue'
 // import { router } from './router/router'
 import App from './photos/App.vue'
 import { store } from './photos/store'
+import { router } from './photos/router'
 
 const app = createApp(App)
 app.use(store)
+app.use(router)
 app.mount('#app')
