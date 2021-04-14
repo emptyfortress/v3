@@ -29,6 +29,11 @@ h2 {
 	font-weight: normal;
 	text-align: center;
 }
+.plus1 {
+	width: 9px;
+	height: 9px;
+	line-height: 0;
+}
 .plus {
 	width: 9px;
 	height: 9px;
@@ -41,6 +46,30 @@ h2 {
 		display: block;
 		margin: 1px;
 		opacity: .6;
+	}
+}
+.flex {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+}
+.link {
+	color: #267DFF;
+	cursor: pointer;
+}
+td.first {
+	&.second {
+		padding-left: 19px;
+	}
+	&.third {
+		padding-left: 38px;
+	}
+	&.forth {
+		padding-left: 57px;
+	}
+	&.fifth {
+		padding-left: 76px;
 	}
 }
 </style>

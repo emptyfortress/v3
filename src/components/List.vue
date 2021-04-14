@@ -11,7 +11,14 @@ table.tab
 		th Контролер
 		th Ответственный исполнитель
 	tbody
-		Row
+		Row(v-for="item in rows"
+			:color="item.color"
+			:done="item.done"
+			:contr="item.contr"
+			:time="item.time"
+			:otvet="item.otvet"
+			:child="item.child"
+			)
 
 </template>
 
@@ -23,7 +30,39 @@ export default {
 	data() {
 		return {
 			rows: [
-				{  }
+				{ color: 'blue', done: true, otvet: false, contr: false, time: true,
+					child: [
+						{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+						{ color: 'blue', done: false, otvet: true, contr: false, time: false,
+							child: [
+								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'green', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
+							]
+						},
+						{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+						{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
+						{ color: 'grey', done: false, otvet: true, contr: false, time: false,
+							child: [
+								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'green', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
+							]
+						},
+						{ color: 'blue', done: false, otvet: true, contr: false, time: false,
+							child: [
+								{ color: 'blue', done: false, otvet: true, contr: false, time: false  },
+								{ color: 'grey', done: false, otvet: true, contr: false, time: false  },
+							]
+						},
+					]
+				},
+				{ color: 'green', done: false, otvet: true, contr: false, time: false  },
+				{ color: 'grey', done: false, otvet: false, contr: true, time: true  },
 			]
 		}
 	},
@@ -52,34 +91,4 @@ export default {
 		border-bottom: 1px solid #eee;
 	}
 }
-/* td.first { */
-/* 	padding: .5rem 1rem; */
-/* 	.second & { */
-/* 		padding-left: 37px; */
-/* 	} */
-/* } */
-/*  */
-/* .link { */
-/* 	color: #267DFF; */
-/* 	cursor: pointer; */
-/* } */
-/* .flex { */
-/* 	display: flex; */
-/* 	justify-content: flex-start; */
-/* 	align-items: center; */
-/* 	gap: 5px; */
-/* } */
-/* .plus { */
-/* 	width: 9px; */
-/* 	height: 9px; */
-/* 	line-height: 0; */
-/* 	background: #fff; */
-/* 	border: 1px solid black; */
-/* 	cursor: pointer; */
-/* 	display: inline-block; */
-/* 	img { */
-/* 		display: block; */
-/* 		margin: 1px; */
-/* 	} */
-/* } */
 </style>

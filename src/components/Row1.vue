@@ -2,10 +2,17 @@
 tr
 	td.first.second
 		.flex
-			.plus(@click="expand = !expand")
+			.plus(@click="expand = !expand" v-if="child")
 				img(src="@/assets/plus.svg" v-if="!expand")
 				img(src="@/assets/minus.svg" v-else)
-			User(color="grey")
+			.plus1(v-else)
+			User(:color="color"
+				:done="done"
+				:contr="contr"
+				:time="time"
+				:otvet="otvet"
+				:child="child"
+				)
 	td.link На исполнение
 	td Орлов П.К.
 	td Завершено
@@ -22,7 +29,7 @@ import User from '@/components/User.vue'
 import Row2 from '@/components/Row2.vue'
 
 export default {
-	props: ['child'],
+	props: ['child', 'color', 'done', 'contr', 'otvet', 'time'],
 	components: { User, Row2  },
 	data() {
 		return {
@@ -34,21 +41,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-td.first {
-	/* padding: .5rem 1rem; */
-	&.second {
-		padding-left: 16px;
-	}
-}
 
-.link {
-	color: #267DFF;
-	cursor: pointer;
-}
-.flex {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 5px;
-}
 </style>

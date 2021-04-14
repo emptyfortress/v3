@@ -1,17 +1,17 @@
 <template lang="pug">
 .icon(:class="color")
 	img(src="@/assets/user1.svg")
-	.otvet O
-	.contr K
-	.done
+	.otvet(v-if="otvet") O
+	.contr(v-if="contr") K
+	.done(v-if="done")
 		img(src="@/assets/check.svg")
-	.time
+	.time(v-if="time")
 		img(src="@/assets/time.svg")
 </template>
 
 <script>
 export default {
-	props: ['color']
+	props: ['color', 'done', 'contr', 'otvet', 'time']
 }
 </script>
 
@@ -22,6 +22,7 @@ export default {
 	height: 24px;
 	position: relative;
 	text-align: center;
+	margin-right: 30px;
 	&.blue {
 		background: #0096DC;
 	}

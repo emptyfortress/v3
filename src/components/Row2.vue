@@ -34,21 +34,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-td.first {
-	/* padding: .5rem 1rem; */
-	&.third {
-		padding-left: 32px;
-	}
-}
 
-.link {
-	color: #267DFF;
-	cursor: pointer;
-}
-.flex {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 5px;
-}
 </style>
