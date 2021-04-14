@@ -9,7 +9,7 @@ tr
 				:time="time"
 				:otvet="otvet"
 				)
-	td.link На исполнение
+	td.link Исполнить поручение
 	td Орлов П.К.
 	td Завершено
 	td 31.07.2020
