@@ -1,7 +1,7 @@
 <template lang="pug">
 table.tab
 	thead
-		th alsdkj
+		th
 		th Описание
 		th Текущий исполнитель
 		th Состояние
@@ -11,22 +11,25 @@ table.tab
 		th Контролер
 		th Ответственный исполнитель
 	tbody
-		tr
-			td
-			td На исполнение
-			td Орлов П.К.
-			td Завершено
-			td 31.07.2020
-			td 27.07.2020
-			td Поликарпов С.М.
-			td Docsvision
-			td Суворов А.А.
+		Row
+		Row
+		Row
+		Row
+		Row
+		Row
+		Row
+		Row
+		Row
+		Row
+		Row
 
 </template>
 
 <script>
-export default {
+import Row from '@/components/Row.vue'
 
+export default {
+	components: { Row }
 }
 </script>
 
@@ -42,9 +45,44 @@ export default {
 		font-size: .85rem;
 		font-weight: 300;
 	}
+	tr {
+		&:hover {
+			background: #efefef;
+		}
+	}
 	td {
-		padding: .9rem 0;
-		border-bottom: 1px solid #ccc;
+		padding: 8px 0;
+		border-bottom: 1px solid #eee;
 	}
 }
+/* td.first { */
+/* 	padding: .5rem 1rem; */
+/* 	.second & { */
+/* 		padding-left: 37px; */
+/* 	} */
+/* } */
+/*  */
+/* .link { */
+/* 	color: #267DFF; */
+/* 	cursor: pointer; */
+/* } */
+/* .flex { */
+/* 	display: flex; */
+/* 	justify-content: flex-start; */
+/* 	align-items: center; */
+/* 	gap: 5px; */
+/* } */
+/* .plus { */
+/* 	width: 9px; */
+/* 	height: 9px; */
+/* 	line-height: 0; */
+/* 	background: #fff; */
+/* 	border: 1px solid black; */
+/* 	cursor: pointer; */
+/* 	display: inline-block; */
+/* 	img { */
+/* 		display: block; */
+/* 		margin: 1px; */
+/* 	} */
+/* } */
 </style>
