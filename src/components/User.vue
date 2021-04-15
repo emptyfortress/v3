@@ -22,7 +22,7 @@ export default {
 	height: 24px;
 	position: relative;
 	text-align: center;
-	margin-right: 20px;
+	margin-right: 5px;
 	&.blue {
 		background: #0096DC;
 	}

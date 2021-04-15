@@ -1,8 +1,8 @@
 <template lang="pug">
 table.tab
 	thead
-		th
 		th Описание
+		//- th Описание
 		th Текущий исполнитель
 		th Состояние
 		th
