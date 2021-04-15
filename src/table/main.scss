@@ -33,10 +33,6 @@ h2 {
 	}
 }
 .flex {
-	background-image: url('@/assets/dot-horiz.png');
-	background-repeat: repeat-x;
-	background-position: center right 50px;
-
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
