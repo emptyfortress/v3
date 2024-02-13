@@ -36,16 +36,13 @@ import Row2 from '@/components/Row2.vue'
 
 export default {
 	props: ['child', 'color', 'done', 'contr', 'otvet', 'time'],
-	components: { User, Row2  },
+	components: { User, Row2 },
 	data() {
 		return {
 			expand: false,
 		}
 	},
-
 }
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
