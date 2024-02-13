@@ -28,7 +28,7 @@ h2 {
 	img {
 		display: block;
 		margin: 1px;
-		opacity: .6;
+		opacity: 0.6;
 	}
 }
 .flex {
@@ -38,7 +38,7 @@ h2 {
 	gap: 8px;
 }
 .link {
-	color: #267DFF;
+	color: #267dff;
 	cursor: pointer;
 	padding-right: 15px;
 }
@@ -59,12 +59,12 @@ td.first {
 .tab {
 	margin-top: 2rem;
 	width: 100%;
-	font-size: .9rem;
+	font-size: 0.9rem;
 	border-collapse: collapse;
 	th {
 		text-align: left;
 		border-bottom: 1px solid #ccc;
-		font-size: .80rem;
+		font-size: 0.8rem;
 		font-weight: 400;
 		color: #888;
 		padding-bottom: 5px;

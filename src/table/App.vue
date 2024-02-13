@@ -10,7 +10,7 @@ import Butt from '@/components/Butt.vue'
 // import User from '@/components/User.vue'
 import List from '@/components/List.vue'
 export default {
-	components: { Butt, User, List },
+	components: { Butt, List },
 }
 </script>
 
