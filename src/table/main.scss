@@ -43,7 +43,13 @@ h2 {
 	padding-right: 15px;
 }
 td.first {
+	background-image: url('@/assets/dot.png');
+	background-repeat: repeat-y;
+	background-position: top 0px left 6px;
 	&.second {
+		background-image: url('@/assets/dot1.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 24px;
 	}
 	&.third {
@@ -56,6 +62,36 @@ td.first {
 		padding-left: 96px;
 	}
 }
+// td.first {
+// 	width: 2%;
+// 	background-image: url('@/assets/dot.png');
+// 	background-repeat: repeat-y;
+// 	background-position: top 0px left 6px;
+// 	&.second {
+// 		background-image: url('@/assets/dot1.png');
+// 		background-repeat: repeat-y;
+// 		background-position: top 0px left 6px;
+// 		padding-left: 24px;
+// 	}
+// 	&.third {
+// 		background-image: url('@/assets/dot2.png');
+// 		background-repeat: repeat-y;
+// 		background-position: top 0px left 6px;
+// 		padding-left: 48px;
+// 	}
+// 	&.forth {
+// 		background-image: url('@/assets/dot3.png');
+// 		background-repeat: repeat-y;
+// 		background-position: top 0px left 6px;
+// 		padding-left: 72px;
+// 	}
+// 	&.fifth {
+// 		background-image: url('@/assets/dot4.png');
+// 		background-repeat: repeat-y;
+// 		background-position: top 0px left 6px;
+// 		padding-left: 96px;
+// 	}
+// }
 .tab {
 	margin-top: 2rem;
 	width: 100%;
