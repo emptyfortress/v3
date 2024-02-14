@@ -53,12 +53,21 @@ td.first {
 		padding-left: 24px;
 	}
 	&.third {
+		background-image: url('@/assets/dot2.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 48px;
 	}
 	&.forth {
+		background-image: url('@/assets/dot3.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 72px;
 	}
 	&.fifth {
+		background-image: url('@/assets/dot4.png');
+		background-repeat: repeat-y;
+		background-position: top 0px left 6px;
 		padding-left: 96px;
 	}
 }
